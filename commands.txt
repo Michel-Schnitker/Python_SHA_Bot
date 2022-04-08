@@ -1,0 +1,4 @@
+start - Who am I ?
+hilfe - Alle Befehle zeigen
+hunger - Mahlzeit suchen
+selbstzerstoerung - leitet Notabschlautung ein
