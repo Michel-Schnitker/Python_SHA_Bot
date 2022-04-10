@@ -1,1 +1,6 @@
 apikey.py
+.API_KEY
+.dmypy.json
+.idea
+venv/
+.mypy_cache
