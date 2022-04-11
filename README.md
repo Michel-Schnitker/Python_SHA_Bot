@@ -17,3 +17,4 @@ Dazu benötigst du außerdem eine `.API_KEY` datei, welcher den Key enthält. Di
 export SHA_API_KEY=...
 ```
 
+

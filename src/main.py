@@ -142,9 +142,10 @@ def verstaendnis_command(update: Update, context: CallbackContext) -> None:  # t
 
 def main() -> None:
     API_KEY = os.environ.get("SHA_API_KEY")
+
     if API_KEY is None:
         print("Error: I cannot find the API Key. Make sure to store it in the environment variable \"SHA_API_KEY\"")
-        exit(1)
+        os._exit(1)
 
     updater = Updater(API_KEY)
     dp = updater.dispatcher  # type: ignore[has-type]
