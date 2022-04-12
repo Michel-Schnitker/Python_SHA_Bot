@@ -1,0 +1,3 @@
+start - Wer bin ich ?
+help - Alle Befehle zeigen
+hunger - Untermenü mit weiteren Befehlen "/hunger help"
