@@ -12,6 +12,23 @@ from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandle
 
 # --- Global vars that hold data for eating ---
 
+# TODO:
+#
+#   Commands:
+
+#   /hunger <=> "Was essen wir?"
+#       Starts the poll and resets "custom".
+#
+#   /hunger-add <=> "Ich möchte X essen"
+#
+#   /hunger-result <=> "Ich bin hungrig"
+#
+#
+#   Logging
+#   Pin the nachricht
+#
+
+
 possible_dishes: Dict[str, List[str]] = {
     "order": [
         "Pizza",
