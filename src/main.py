@@ -123,6 +123,13 @@ list - Zeigt aktuelle Optionen
 random - Lasst den Zufall entscheiden
                     """)
 
+def random_handler(action: Update, context: CallbackContext) -> None:
+    request = action.message.text.split()[1:]
+    if (len(request) == 0):
+        action.message.reply_text("Sende mir eine Liste und ich wähle eines aus.")
+        return
+    action.message.reply_text(rand_text(request)) 
+    
 
 def kill_switch(action: Update, context: CallbackContext) -> None:  # type: ignore[type-arg]
     if action.effective_chat is None:
