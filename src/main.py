@@ -175,6 +175,7 @@ def main() -> None:
 
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('hunger', hunger_handler))
+    dp.add_handler(CommandHandler('random', random_handler))
     dp.add_handler(CommandHandler('help', help_handler))
     dp.add_handler(CommandHandler('selbstzerstoerung', kill_switch))
     dp.add_handler(CommandHandler('mute', kommunikation_off))
