@@ -24,7 +24,6 @@ from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandle
 #   /hunger-result <=> "Ich bin hungrig"
 #
 #
-#   Logging
 #   Pin the nachricht
 #
 
