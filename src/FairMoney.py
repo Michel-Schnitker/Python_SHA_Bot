@@ -6,7 +6,7 @@ TransaktionTolerance = 0.01
 
 class Person:
 
-    def __init__(self, name, paid, spend):
+    def __init__(self, name: str, paid: str, spend: str):
         self.name = name
         self.paid = round(float(paid), 2)  # bezahlt, real ausgegeben
         self.spend = round(float(spend), 2)  # vorgeschossene Summe
@@ -18,7 +18,7 @@ class Person:
     def get_surplus(self) -> float:
         return self.surplus
 
-    def correktSurplus(self, globalSurplus):
+    def correktSurplus(self, globalSurplus: float):
         self.surplus -= globalSurplus
 
 
@@ -26,9 +26,9 @@ class CollactData:
 
     def __init__(self):
         self.persons = []
-        self.count = 0
-        self.paidSum = 0
-        self.spendSum = 0
+        self.count = float(0)
+        self.paidSum = float(0)
+        self.spendSum = float(0)
 
     def __str__(self) -> str:
         returnString = str(self.count) + " Personen:" + "\n"
