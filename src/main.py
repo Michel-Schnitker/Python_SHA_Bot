@@ -8,6 +8,8 @@ from typing import Dict, List
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters
 
+import FairMoney
+
 # Studentisches Hilfssystem zur Alltagsbewältigung (SHA - SHzA_Robot)
 
 # --- Global vars that hold data for eating ---
@@ -128,8 +130,15 @@ def random_handler(action: Update, context: CallbackContext) -> None:
     if (len(request) == 0):
         action.message.reply_text("Sende mir eine Liste und ich wähle eines aus.")
         return
-    action.message.reply_text(rand_text(request)) 
-    
+    action.message.reply_text(rand_text(request))
+
+
+def fairMoney_handler(action: Update, context: CallbackContext) -> None:
+    request = action.message.text.split()[1:]
+
+    action.message.reply_text(FairMoney.runCalculation(request))
+
+
 
 def kill_switch(action: Update, context: CallbackContext) -> None:  # type: ignore[type-arg]
     if action.effective_chat is None:
@@ -176,6 +185,7 @@ def main() -> None:
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('hunger', hunger_handler))
     dp.add_handler(CommandHandler('random', random_handler))
+    dp.add_handler(CommandHandler('splitMoney', fairMoney_handler))
     dp.add_handler(CommandHandler('help', help_handler))
     dp.add_handler(CommandHandler('selbstzerstoerung', kill_switch))
     dp.add_handler(CommandHandler('mute', kommunikation_off))
