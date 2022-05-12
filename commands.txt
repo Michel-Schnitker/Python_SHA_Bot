@@ -1,3 +1,5 @@
 start - Wer bin ich ?
 help - Alle Befehle zeigen
 hunger - Untermenü mit weiteren Befehlen "/hunger help"
+random - Gibt ein zufälliges Element einer Liste zurück
+splitmoney - [ [Name] [paid(ausgegeben)] [spend(bezahlt)] ] Berechnet Kosten nach dem Restaurantbesuch

@@ -81,7 +81,7 @@ start - Begrüßungstext
 help - Liste aller Befehle
 hunger - tippe: "/hunger help" für mehr Hilfe
 random - Gibt ein zufälliges Element einer Liste aus.
-splitMoney - [ [Name] [paid(ausgegeben)] [spend(bezahlt)] ] Berechnet Kosten nach dem Restaurantbesuch
+splitmoney - [ [Name] [paid(ausgegeben)] [spend(bezahlt)] ] Berechnet Kosten nach dem Restaurantbesuch
 selbstzerstoerung - terminiert den Bot
 mute/unmute - Einstellung für Feedback
                               """)
@@ -187,7 +187,7 @@ def main() -> None:
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('hunger', hunger_handler))
     dp.add_handler(CommandHandler('random', random_handler))
-    dp.add_handler(CommandHandler('splitMoney', fairMoney_handler))
+    dp.add_handler(CommandHandler('splitmoney', fairMoney_handler))
     dp.add_handler(CommandHandler('help', help_handler))
     dp.add_handler(CommandHandler('selbstzerstoerung', kill_switch))
     dp.add_handler(CommandHandler('mute', kommunikation_off))
