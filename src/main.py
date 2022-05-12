@@ -80,6 +80,8 @@ def help_handler(action: Update, _: CallbackContext) -> None:  # type: ignore[ty
 start - Begrüßungstext
 help - Liste aller Befehle
 hunger - tippe: "/hunger help" für mehr Hilfe
+random - Gibt ein zufälliges Element einer Liste aus.
+splitMoney - [ [Name] [paid(ausgegeben)] [spend(bezahlt)] ] Berechnet Kosten nach dem Restaurantbesuch
 selbstzerstoerung - terminiert den Bot
 mute/unmute - Einstellung für Feedback
                               """)

@@ -84,7 +84,7 @@ class CollactData:
 
 
 def runCalculation(input) -> str:
-    request = input.split()
+    request = input
 
     if (len(request) % 3 != 0 or len(request) <= 3):
         return "Usage: [[Name] [paid] [spend]]"
